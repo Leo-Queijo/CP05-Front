@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Melodia - Sua Música, Sua Forma</title>
+
+  <!-- Fonte personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome para ícones -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+
+
+
+  <!-- Estilo para aplicar a fonte Nunito -->
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white scroll-smooth transition-colors duration-300">
+
+
+
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 w-full bg-white/70 dark:bg-gray-900/70 backdrop-blur-md z-50 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-teal-500 dark:text-teal-400">Melodia</h1>
+
+
+
+      <!-- Botões (tema + menu mobile) -->
+      <div class="flex items-center space-x-4">
+        <!-- Botão para alternar tema -->
+        <button id="theme-toggle" class="text-teal-500 dark:text-teal-400 text-xl" aria-label="Alternar tema">
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
+
+
+
+        <!-- Botão de menu mobile -->
+        <button id="menu-btn" class="md:hidden text-teal-500 dark:text-teal-400 text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+
+
+      <!-- Menu Desktop -->
+      <nav id="menu" class="hidden md:flex space-x-4">
+        <a href="./main.html" class="hover:text-teal-500 dark:hover:text-teal-400">Início</a>
+        <a href="./sobre.html" class="hover:text-teal-500 dark:hover:text-teal-400">Sobre</a>
+        <a href="./funcionalidades.html" class="hover:text-teal-500 dark:hover:text-teal-400">Funcionalidades</a>
+        <a href="./depoimento.html" class="hover:text-teal-500 dark:hover:text-teal-400">Depoimentos</a>
+      </nav>
+    </div>
+
+
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white/90 dark:bg-gray-900/90">
+      <a href="./main.html" class="block hover:text-teal-500 dark:hover:text-teal-400">Início</a>
+      <a href="./sobre.html" class="block hover:text-teal-500 dark:hover:text-teal-400">Sobre</a>
+      <a href="./funcionalidades.html" class="block hover:text-teal-500 dark:hover:text-teal-400">Funcionalidades</a>
+      <a href="./depoimento.html" class="block hover:text-teal-500 dark:hover:text-teal-400">Depoimentos</a>
+    </div>
+  </header>
+
+
+  <!-- CONTATO -->
+  <section id="contato" class="py-20 px-6 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div class="flex flex-col lg:flex-row gap-16">
+      <!-- Coluna da Esquerda: Formulário -->
+      <div class="flex-1">
+        <div class="flex items-center gap-2 mb-6">
+          <i class="far fa-envelope text-purple-600 dark:text-purple-400 text-3xl"></i>
+          <h3 class="text-3xl font-bold text-teal-500 dark:text-teal-400 text-left">Fale com a gente</h3>
+        </div>
+        <form class="space-y-4 text-left w-full max-w-md">
+          <input type="email" placeholder="Seu e-mail" class="w-full p-3 rounded bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-400" required>
+          <textarea placeholder="Sua mensagem" rows="4" class="w-full p-3 rounded bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-400" required></textarea>
+          <button type="submit" class="bg-teal-500 hover:bg-teal-400 hover:scale-105 text-white py-3 px-6 rounded transition font-bold">Enviar</button>
+        </form>
+      </div>
+  
+      <!-- Coluna da Direita: Localização -->
+      <div class="flex-1 space-y-2">
+        <div class="flex items-center gap-2 mb-6">
+          <i class="fas fa-map-marker-alt text-purple-700 dark:text-purple-400 text-2xl"></i>
+          <h3 class="text-3xl font-bold text-teal-500 dark:text-teal-400">Localização</h3>
+        </div>
+        <div class=" bg-gray-200 dark:bg-gray-800">
+            <p class="text-gray-700 dark:text-gray-300">Rua Arraia, 432 - São Paulo, SP</p>
+            <p class="text-gray-700 dark:text-gray-300">CEP - 04051-250</p>
+            <p class="text-gray-700 dark:text-gray-300">Telefone/Whatsapp: (11) 94002-8922</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+  <!-- RODAPÉ -->
+  <footer class="bg-white dark:bg-gray-900 text-center py-6 text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">
+    <div class="flex justify-center space-x-6 mb-4">
+      <a href="https://www.instagram.com" aria-label="Instagram" class="hover:text-teal-400 text-xl"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.twitter.com" aria-label="Twitter" class="hover:text-teal-400 text-xl"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.facebook.com" aria-label="Facebook" class="hover:text-teal-400 text-xl"><i class="fab fa-facebook"></i></a>
+    </div>
+    <p>&copy; 2025 Melodia. Todos os direitos reservados.</p>
+  </footer>
+
+
+
+
+  <!-- JS - Alternância de tema e menu mobile -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      // Alternar exibição do menu mobile
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Fechar menu mobile ao clicar em qualquer link
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+
+      // Alternar tema claro/escuro
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+      const root = document.documentElement;
+
+      const setTheme = (theme) => {
+        if (theme === 'light') {
+          root.classList.remove('dark');
+          themeIcon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+          root.classList.add('dark');
+          themeIcon.classList.replace('fa-sun', 'fa-moon');
+        }
+        localStorage.setItem('theme', theme);
+      };
+
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      setTheme(savedTheme);
+
+      themeToggle.addEventListener('click', () => {
+        const isDark = root.classList.contains('dark');
+        setTheme(isDark ? 'light' : 'dark');
+      });
+    });
+  </script>
+
+</body>
+</html>

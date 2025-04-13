@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funcionalidades - Melodia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Nunito', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white scroll-smooth transition-colors duration-300">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 w-full bg-white/70 dark:bg-gray-900/70 backdrop-blur-md z-50 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-teal-500 dark:text-teal-400">Melodia</h1>
+
+      <!-- Botões -->
+      <div class="flex items-center space-x-4">
+        <!-- Botão Tema -->
+        <button id="theme-toggle" class="text-teal-500 dark:text-teal-400 text-xl mr-20" aria-label="Alternar tema">
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
+
+        <!-- Botão Mobile -->
+        <button id="menu-btn" class="md:hidden text-teal-500 dark:text-teal-400 text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Menu Desktop -->
+      <nav id="menu" class="hidden md:flex space-x-4">
+        <a href="./main.html" class="hover:text-teal-500 dark:hover:text-teal-400">Inicio</a>
+        <a href="./sobre.html" class="hover:text-teal-500 dark:hover:text-teal-400">Sobre</a>
+        <a href="./depoimento.html" class="hover:text-teal-500 dark:hover:text-teal-400">Depoimentos</a>
+        <a href="./contato.html" class="hover:text-teal-500 dark:hover:text-teal-400">Contato</a>
+      </nav>
+    </div>
+
+    <!-- Menu Mobile Expandido -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white/90 dark:bg-gray-900/90">
+      <a href="./main.html" class="block hover:text-teal-500 dark:hover:text-teal-400">Inicio</a>
+      <a href="./sobre.html" class="block hover:text-teal-500 dark:hover:text-teal-400">Sobre</a>
+      <a href="./depoimento.html" class="block hover:text-teal-500 dark:hover:text-teal-400">Depoimentos</a>
+      <a href="./contato.html" class="block hover:text-teal-500 dark:hover:text-teal-400">Contato</a>
+    </div>
+  </header>
+
+  <!-- FUNCIONALIDADES -->
+  <section id="funcionalidades" class="py-20 px-6 bg-white dark:bg-gray-900 text-center transition-colors duration-300">
+    <div class="max-w-7xl mx-auto">
+      <h3 class="text-3xl font-bold mb-12 text-teal-500 dark:text-teal-400">Funcionalidades</h3>
+      
+      <!-- Grid Responsivo para Funcionalidades -->
+      <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-3 text-left">
+        
+        <!-- Funcionalidade 1 -->
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition transform hover:shadow-xl">
+          <i class="fas fa-headphones-alt text-4xl mb-3 text-teal-500 dark:text-teal-400"></i>
+          <h4 class="font-bold text-xl mb-2">Qualidade de Som</h4>
+          <p>Ouça suas músicas com a melhor qualidade de áudio, sem perda de detalhes.</p>
+        </div>
+
+        <!-- Funcionalidade 2 -->
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition transform hover:shadow-xl">
+          <i class="fas fa-music text-4xl mb-3 text-teal-500 dark:text-teal-400"></i>
+          <h4 class="font-bold text-xl mb-2">Playlists Personalizadas</h4>
+          <p>Crie playlists adaptadas ao seu estilo e humor com a nossa tecnologia de recomendação.</p>
+        </div>
+
+        <!-- Funcionalidade 3 -->
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition transform hover:shadow-xl">
+          <i class="fas fa-search text-4xl mb-3 text-teal-500 dark:text-teal-400"></i>
+          <h4 class="font-bold text-xl mb-2">Descoberta de Novos Artistas</h4>
+          <p>Explore novas músicas e descubra talentos emergentes que você vai amar.</p>
+        </div>
+
+        <!-- Funcionalidade 4 -->
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition transform hover:shadow-xl">
+          <i class="fas fa-cloud-download-alt text-4xl mb-3 text-teal-500 dark:text-teal-400"></i>
+          <h4 class="font-bold text-xl mb-2">Offline</h4>
+          <p>Ouça suas músicas favoritas sem precisar de conexão com a internet.</p>
+        </div>
+
+        <!-- Funcionalidade 5 -->
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition transform hover:shadow-xl">
+          <i class="fas fa-share-alt text-4xl mb-3 text-teal-500 dark:text-teal-400"></i>
+          <h4 class="font-bold text-xl mb-2">Compartilhamento Fácil</h4>
+          <p>Compartilhe sua playlist e músicas com amigos e familiares diretamente das plataformas.</p>
+        </div>
+
+        <!-- Funcionalidade 6 -->
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition transform hover:shadow-xl">
+          <i class="fas fa-pause-circle text-4xl mb-3 text-teal-500 dark:text-teal-400"></i>
+          <h4 class="font-bold text-xl mb-2">Controle de Reprodução</h4>
+          <p>Tenha controle total sobre suas músicas: pausar, pular, repetir, e mais!</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white dark:bg-gray-900 text-center py-6 text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">
+    <div class="flex justify-center space-x-6 mb-4">
+      <a href="https://www.instagram.com" aria-label="Instagram" class="hover:text-teal-400 text-xl"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.twitter.com" aria-label="Twitter" class="hover:text-teal-400 text-xl"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.facebook.com" aria-label="Facebook" class="hover:text-teal-400 text-xl"><i class="fab fa-facebook"></i></a>
+    </div>
+    <p>&copy; 2025 Melodia. Todos os direitos reservados.</p>
+  </footer>
+
+    <!-- JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const menuBtn = document.getElementById('menu-btn');
+          const mobileMenu = document.getElementById('mobile-menu');
+    
+          menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+    
+          mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.add('hidden');
+            });
+          });
+    
+          const themeToggle = document.getElementById('theme-toggle');
+          const themeIcon = document.getElementById('theme-icon');
+          const root = document.documentElement;
+    
+          const setTheme = (theme) => {
+            if (theme === 'light') {
+              root.classList.remove('dark');
+              themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+              root.classList.add('dark');
+              themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+            localStorage.setItem('theme', theme);
+          };
+    
+          const savedTheme = localStorage.getItem('theme') || 'dark';
+          setTheme(savedTheme);
+    
+          themeToggle.addEventListener('click', () => {
+            const isDark = root.classList.contains('dark');
+            setTheme(isDark ? 'light' : 'dark');
+          });
+        });
+      </script>
+    
+    </body>
+    </html>
+
