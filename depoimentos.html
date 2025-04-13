@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Depoimentos - Melodia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Nunito', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white scroll-smooth transition-colors duration-300">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 w-full bg-white/70 dark:bg-gray-900/70 backdrop-blur-md z-50 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-teal-500 dark:text-teal-400">Melodia</h1>
+
+      <!-- Botões -->
+      <div class="flex items-center space-x-4">
+        <!-- Botão Tema -->
+        <button id="theme-toggle" class="text-teal-500 dark:text-teal-400 text-xl mr-20" aria-label="Alternar tema">
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
+
+        <!-- Botão Mobile -->
+        <button id="menu-btn" class="md:hidden text-teal-500 dark:text-teal-400 text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Menu Desktop -->
+      <nav id="menu" class="hidden md:flex space-x-4">
+        <a href="./main.html" class="hover:text-teal-500 dark:hover:text-teal-400">Inicio</a>
+        <a href="./sobre.html" class="hover:text-teal-500 dark:hover:text-teal-400">Sobre</a>
+        <a href="./depoimentos.html" class="hover:text-teal-500 dark:hover:text-teal-400">Depoimentos</a>
+        <a href="./contato.html" class="hover:text-teal-500 dark:hover:text-teal-400">Contato</a>
+      </nav>
+    </div>
+
+    <!-- Menu Mobile Expandido -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white/90 dark:bg-gray-900/90">
+      <a href="./main.html" class="block hover:text-teal-500 dark:hover:text-teal-400">Inicio</a>
+      <a href="./sobre.html" class="block hover:text-teal-500 dark:hover:text-teal-400">Sobre</a>
+      <a href="./depoimentos.html" class="block hover:text-teal-500 dark:hover:text-teal-400">Depoimentos</a>
+      <a href="./contato.html" class="block hover:text-teal-500 dark:hover:text-teal-400">Contato</a>
+    </div>
+  </header>
+
+  <!-- Depoimentos -->
+
+<body>
+    <section id="depoimentos" class="py-20 px-6 bg-gray-100 dark:bg-gray-950 text-center transition-colors duration-300">
+        <h3 class="text-3xl font-bold mb-12 text-teal-500 dark:text-teal-400">O que dizem nossos usuários</h3>
+        <div class="max-w-5xl mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+          <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition">
+            <p>"Melodia revolucionou meu jeito de ouvir música. Recomendo demais!"</p>
+            <div class="flex items-center mt-4">
+              <img src="https://i.pravatar.cc/50?img=12" alt="Depoimento" class="rounded-full w-10 h-10 mr-3">
+              <span>João Santos</span>
+            </div>
+          </div>
+          <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:scale-105 transition">
+            <p>"Simplesmente perfeito! Interface intuitiva e ótimas recomendações."</p>
+            <div class="flex items-center mt-4">
+              <img src="https://i.pravatar.cc/50?img=5" alt="Depoimento" class="rounded-full w-10 h-10 mr-3">
+              <span>Maria Oliveira</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+ <!-- FOOTER -->
+ <footer class="bg-white dark:bg-gray-900 text-center py-6 text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">
+    <div class="flex justify-center space-x-6 mb-4">
+      <a href="https://www.instagram.com" aria-label="Instagram" class="hover:text-teal-400 text-xl"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.twitter.com" aria-label="Twitter" class="hover:text-teal-400 text-xl"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.facebook.com" aria-label="Facebook" class="hover:text-teal-400 text-xl"><i class="fab fa-facebook"></i></a>
+    </div>
+    <p>&copy; 2025 Melodia. Todos os direitos reservados.</p>
+  </footer>
+    
+</body>
+</html>
